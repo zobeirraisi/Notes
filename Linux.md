@@ -5,3 +5,5 @@
 
 ### number of lines in `<filename>`
 `wc -l filename.txt`
+### convert images to gif
+`convert -delay 20 -loop 0 *.jpg myimage.gif`
