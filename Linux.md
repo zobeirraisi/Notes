@@ -9,3 +9,5 @@
 `convert -delay 20 -loop 0 *.jpg myimage.gif`
 ### copy multiple files from a list:
 `xargs -a list.txt cp -t new_folder`
+### watch the siz of folders :
+`du -h --max-depth=1`
