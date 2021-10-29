@@ -1,0 +1,37 @@
+def main():
+    
+    start = int(input("Enter start value: "))
+    final = int(input("Enter final value: "))
+    order = input("Enter order")
+    #call function
+    valid = print_odds(start, final, order)
+    
+        
+def print_odds(start,final,order):
+    #check validity
+    valid = True
+    if final>start or start<-10000 or final>10000 or order!="A" or order !="D":
+        valid = False  
+    #define list of numbers to print later
+    nums = []
+    #two while loops, one for each order
+    if order=="A":
+        #increment start if not even
+        if start%2==0:
+            start+=1
+        #ascending order
+        while start<final:
+            nums.append(start)
+            start+=2
+    else:
+        #descending order
+        if final%2==0:
+            final-=1
+        while final>start:
+            nums.append(final)
+            final-=2
+    
+    print(nums)
+    return valid
+    
+main()
