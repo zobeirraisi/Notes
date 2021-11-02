@@ -11,3 +11,5 @@
 `xargs -a list.txt cp -t new_folder`
 ### watch the siz of folders :
 `du -h --max-depth=1`
+### Batch resizing converting (check the ! for ignoring the aspect ratio)
+`for i in *.jpg ; do convert -resize 256x256! "$i" "${i%.*}.jpg" ; done`
