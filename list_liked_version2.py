@@ -2,11 +2,11 @@
 -------------------------------------------------------
 Linked version of the list ADT.
 -------------------------------------------------------
-Author:  Eric Wildfong
-ID:      190559940
-Email:   wild9940@mylaurier.ca
-Term:    Winter 2020
-__updated__ = "2020-03-04"
+Author:  
+ID:      
+Email:   
+Term:    
+__updated__ = 
 -------------------------------------------------------
 """
 from copy import deepcopy
