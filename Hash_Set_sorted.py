@@ -1,8 +1,8 @@
 # Imports
 # Use any appropriate data structure here.
-from List_array import List
+from Sorted_List_array import Sorted_List
 # Define the new_slot slot creation function.
-new_slot = List
+new_slot = Sorted_List
 
 # Constants
 SEP = '-' * 40
@@ -108,7 +108,7 @@ class Hash_Set:
         else:
             if self._count >= self._slots * Hash_Set._LOAD_FACTOR:
                 self._rehash()
-            slot.append(value)
+            slot.insert(value)
             insert = True
             self._count += 1
         return insert
@@ -168,7 +168,7 @@ class Hash_Set:
         for slot in self._table:
             for value in slot:
                 slot_num = hash(value) % self._slots
-                temp[slot_num].append(value)
+                temp[slot_num].insert(value)
         self._table = temp
         return
 
