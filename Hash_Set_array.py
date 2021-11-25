@@ -1,9 +1,8 @@
-"""
 # Imports
 # Use any appropriate data structure here.
-from BST_linked import BST
+from List_array import List
 # Define the new_slot slot creation function.
-new_slot = BST
+new_slot = List
 
 # Constants
 SEP = '-' * 40
@@ -109,7 +108,7 @@ class Hash_Set:
         else:
             if self._count >= self._slots * Hash_Set._LOAD_FACTOR:
                 self._rehash()
-            slot.insert(value)
+            slot.append(value)
             insert = True
             self._count += 1
         return insert
@@ -169,7 +168,7 @@ class Hash_Set:
         for slot in self._table:
             for value in slot:
                 slot_num = hash(value) % self._slots
-                temp[slot_num].insert(value)
+                temp[slot_num].append(value)
         self._table = temp
         return
 
